@@ -1,10 +1,15 @@
 
-import React from "react";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Index = () => (
-  <div className="h-screen flex items-center justify-center">
-    <h1 className="text-2xl">Hello</h1>
-  </div>
-);
+const Index = () => {
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    navigate("/");
+  }, [navigate]);
+  
+  return null;
+};
 
 export default Index;
